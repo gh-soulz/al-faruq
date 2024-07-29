@@ -11,7 +11,7 @@
         }
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: Heavitas, sans-serif;
         }
         header {
             display: flex;
@@ -54,12 +54,17 @@
             background-color: #333;
             color: #fff;
             text-align: center;
-            padding: 10px;
+            padding: 5px; /* Reduced padding */
             position: fixed;
             bottom: 0;
             width: 100%;
             border-top: 1px solid #ddd;
             font-family: 'Heavitas';
+            line-height: 0.5; /* Reduced line height */
+        }
+        .address {
+            margin: 5px 0;
+            font-family: Heavitas, sans-serif;
         }
     </style>
 </head>
@@ -76,7 +81,10 @@
         </div>
     </nav>
     <footer>
-        <p>&copy; <span id="year"></span> | AL-FARUQ.</p>
+        <div class="address">
+            <p>Address: Dixon Rd, Birmingham B10 0BP</p>
+        </div>
+        <p>&copy; <span id="year"></span> | AL-FARUQ. All rights reserved.</p>
         <script>
             // Automatically update the copyright year
             document.getElementById('year').textContent = new Date().getFullYear();
