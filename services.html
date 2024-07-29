@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <style>
+        @font-face {
+            font-family: 'Heavitas';
+            src: url('Heavitas.ttf') format('truetype');
+        }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            background-color: #f8f8f8;
+            border-bottom: 1px solid #ddd;
+            font-family: 'Heavitas';
+        }
+        .logo {
+            width: 150px;
+            height: 60px;
+        }
+        nav {
+            background-color: #333;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+        .nav-container a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 16px;
+            line-height: 24px;
+            background-color: #333;
+            padding: 8px;
+            border-radius: 12px;
+            transition: transform 0.15s ease;
+            font-family: 'Heavitas';
+        }
+        .nav-container a:hover {
+            text-decoration: none;
+            background-color: #222;
+            transform: scale(1.1);
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            border-top: 1px solid #ddd;
+            font-family: 'Heavitas';
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="Logo" class="logo">
+    </header>
+    <nav>
+        <div class="nav-container">
+            <a href="./">Home</a>
+            <a href="./about">About</a>
+            <a href="./services">Services</a>
+            <a href="./contact">Contact</a>
+        </div>
+    </nav>
+    <footer>
+        <p>&copy; <span id="year"></span> | AL-FARUQ.</p>
+        <script>
+            // Automatically update the copyright year
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+    </footer>
+</body>
+</html>
