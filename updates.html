@@ -73,22 +73,14 @@
         .footer p {
             margin: 0;
         }
-        
         .container {
-            width: 100%; /* Full width */
-            padding: 20px;
-            box-sizing: border-box; /* Include padding and border in element's total width and height */
-            border: 1px solid #ddd; /* Border for visibility */
         }
-        .content-box {
-            background-color: #f0f0f0; /* Background color for the box */
-            padding: 10px 20px; /* Add horizontal padding */
-            border-radius: 12px; /* Rounded corners for the box */
-            height: 470px;
-            overflow-y: scroll;
-            user-select: none;
+        h1 {
+        	text-align: center;
+            word-wrap: break-word;
+            font-family: 'Heavitas';
         }
-
+        
         /* Responsive Design */
         @media (max-width: 768px) {
             .nav-container {
@@ -98,12 +90,11 @@
                 margin: 5px;
                 font-size: 14px;
             }
-            .content-box {
-                padding: 10px 15px; /* Reduce padding for smaller screens */
-                height: calc(100vh - 210px); /* Adjust height considering other elements */
-            }
             footer {
                 padding: 15px;
+            }
+            .container {
+                padding: 15px; /* Adjust padding for smaller screens */
             }
         }
 
@@ -117,13 +108,12 @@
                 padding: 6px;
                 margin: 3px;
             }
-            .content-box {
-                padding: 10px; /* Further reduce padding */
-                height: calc(100vh - 200px); /* Adjust height considering other elements */
-            }
             footer {
                 font-size: 12px;
                 padding: 10px;
+            }
+            .container {
+                padding: 10px; /* Adjust padding for even smaller screens */
             }
         }
     </style>
@@ -142,9 +132,7 @@
         </div>
     </nav>
     <div class="container">
-        <div class="content-box">
-            <h1>MADRASAH UPDATES</h1>
-        </div>
+        <h1>MADRASAH UPDATES</h1>
     </div>
     <footer>
         <div class="address">
