@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ABOUT</title>
+    <title>HOME</title>
+    <link rel="icon" type="image/png" href="images/main_logo.png">
     <style>
         @font-face {
             font-family: 'Heavitas';
@@ -12,14 +13,17 @@
         body {
             margin: 0;
             font-family: Heavitas, sans-serif;
+            background-color: white;
+            color: #333;
+            padding-bottom: 60px; /* Space for the fixed footer */
         }
         header {
             display: flex;
             justify-content: center;
+            align-items: center;
             padding: 10px;
             background-color: #f8f8f8;
             border-bottom: 1px solid #ddd;
-            font-family: 'Heavitas';
         }
         .logo {
             width: 150px;
@@ -31,22 +35,21 @@
         .nav-container {
             display: flex;
             justify-content: center;
+            flex-wrap: wrap; /* Allow items to wrap on smaller screens */
             padding: 10px 0;
         }
         .nav-container a {
             color: #fff;
             text-decoration: none;
-            margin: 0 20px;
+            margin: 5px 10px; /* Space around each link */
             font-size: 16px;
             line-height: 24px;
-            background-color: #333;
             padding: 8px;
             border-radius: 12px;
             transition: transform 0.15s ease;
             font-family: 'Heavitas';
         }
         .nav-container a:hover {
-            text-decoration: none;
             background-color: #222;
             transform: scale(1.1);
         }
@@ -54,17 +57,51 @@
             background-color: #333;
             color: #fff;
             text-align: center;
-            padding: 5px; /* Reduced padding */
+            padding: 10px;
             position: fixed;
             bottom: 0;
             width: 100%;
             border-top: 1px solid #ddd;
             font-family: 'Heavitas';
-            line-height: 0.5; /* Reduced line height */
+            box-sizing: border-box;
+            overflow-wrap: break-word; /* Handle text overflow */
         }
         .address {
             margin: 5px 0;
-            font-family: Heavitas, sans-serif;
+            word-wrap: break-word; /* Ensure long text wraps */
+        }
+        .footer p {
+            margin: 0;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-container {
+                padding: 10px;
+            }
+            .nav-container a {
+                margin: 5px;
+                font-size: 14px;
+            }
+            footer {
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                width: 120px;
+                height: 48px;
+            }
+            .nav-container a {
+                font-size: 12px;
+                padding: 6px;
+                margin: 3px;
+            }
+            footer {
+                font-size: 12px;
+                padding: 10px;
+            }
         }
     </style>
 </head>
@@ -78,17 +115,21 @@
             <a href="./about">About</a>
             <a href="./services">Services</a>
             <a href="./contact">Contact</a>
+            <a href="./updates">Updates</a>
         </div>
     </nav>
+    <div class="container">
+        <!-- Content goes here -->
+    </div>
     <footer>
         <div class="address">
             <p>Address: Dixon Rd, Birmingham B10 0BP</p>
         </div>
         <p>&copy; <span id="year"></span> | AL-FARUQ. All rights reserved.</p>
-        <script>
-            // Automatically update the copyright year
-            document.getElementById('year').textContent = new Date().getFullYear();
-        </script>
     </footer>
+    <script>
+        // JavaScript to update the year dynamically
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
