@@ -15,6 +15,7 @@
             font-family: Heavitas, sans-serif;
             background-color: white;
             color: #333;
+            padding-bottom: 60px; /* Space for the fixed footer */
         }
         header {
             display: flex;
@@ -62,9 +63,12 @@
             width: 100%;
             border-top: 1px solid #ddd;
             font-family: 'Heavitas';
+            box-sizing: border-box;
+            overflow-wrap: break-word; /* Handle text overflow */
         }
         .address {
             margin: 5px 0;
+            word-wrap: break-word; /* Ensure long text wraps */
         }
         .footer p {
             margin: 0;
@@ -79,6 +83,9 @@
                 margin: 5px;
                 font-size: 14px;
             }
+            footer {
+                padding: 15px;
+            }
         }
 
         @media (max-width: 480px) {
@@ -91,9 +98,9 @@
                 padding: 6px;
                 margin: 3px;
             }
-            .footer {
+            footer {
                 font-size: 12px;
-                padding: 5px;
+                padding: 10px;
             }
         }
     </style>
@@ -108,6 +115,7 @@
             <a href="./about">About</a>
             <a href="./services">Services</a>
             <a href="./contact">Contact</a>
+            <a href="./updates">Updates</a>
         </div>
     </nav>
     <div class="container">
