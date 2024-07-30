@@ -74,6 +74,21 @@
             margin: 0;
         }
         
+        .container {
+            width: 100%; /* Full width */
+            padding: 20px;
+            box-sizing: border-box; /* Include padding and border in element's total width and height */
+            border: 1px solid #ddd; /* Border for visibility */
+        }
+        .content-box {
+            background-color: #f0f0f0; /* Background color for the box */
+            padding: 10px 20px; /* Add horizontal padding */
+            border-radius: 12px; /* Rounded corners for the box */
+            height: 470px;
+            overflow-y: scroll;
+            user-select: none;
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .nav-container {
@@ -82,6 +97,10 @@
             .nav-container a {
                 margin: 5px;
                 font-size: 14px;
+            }
+            .content-box {
+                padding: 10px 15px; /* Reduce padding for smaller screens */
+                height: calc(100vh - 210px); /* Adjust height considering other elements */
             }
             footer {
                 padding: 15px;
@@ -97,6 +116,10 @@
                 font-size: 12px;
                 padding: 6px;
                 margin: 3px;
+            }
+            .content-box {
+                padding: 10px; /* Further reduce padding */
+                height: calc(100vh - 200px); /* Adjust height considering other elements */
             }
             footer {
                 font-size: 12px;
@@ -119,7 +142,9 @@
         </div>
     </nav>
     <div class="container">
-        <!-- Content goes here -->
+        <div class="content-box">
+            <h1>MADRASAH UPDATES</h1>
+        </div>
     </div>
     <footer>
         <div class="address">
