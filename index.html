@@ -12,18 +12,21 @@
         body {
             margin: 0;
             font-family: Heavitas, sans-serif;
+            font-size: 16px; /* Base font size */
         }
         header {
             display: flex;
             justify-content: center;
-            padding: 10px;
+            padding: 10px 5%;
             background-color: #f8f8f8;
             border-bottom: 1px solid #ddd;
-            font-family: 'Heavitas';
         }
         .logo {
-            width: 150px;
-            height: 60px;
+            width: auto;
+            height: 60px; /* Set the height */
+            max-height: 60px; /* Ensure max height is not exceeded */
+            max-width: 120px; /* Ensure max width is not exceeded */
+            object-fit: contain; /* Maintains aspect ratio */
         }
         nav {
             background-color: #333;
@@ -31,19 +34,19 @@
         .nav-container {
             display: flex;
             justify-content: center;
-            padding: 10px 0;
+            flex-wrap: wrap; /* Allow wrapping */
+            padding: 10px 5%;
         }
         .nav-container a {
             color: #fff;
             text-decoration: none;
-            margin: 0 20px;
-            font-size: 16px;
-            line-height: 24px;
-            background-color: #333;
+            margin: 5px 10px;
+            font-size: 1rem;
+            line-height: 1.5rem;
             padding: 8px;
             border-radius: 12px;
             transition: transform 0.15s ease;
-            font-family: 'Heavitas';
+            background-color: #333;
         }
         .nav-container a:hover {
             text-decoration: none;
@@ -54,17 +57,33 @@
             background-color: #333;
             color: #fff;
             text-align: center;
-            padding: 5px; /* Reduced padding */
+            padding: 5px 5%; /* Reduced padding */
             position: fixed;
             bottom: 0;
             width: 100%;
             border-top: 1px solid #ddd;
-            font-family: 'Heavitas';
-            line-height: 0.5; /* Reduced line height */
+            font-size: 0.75rem; /* Reduced font size */
+            line-height: 1rem; /* Reduced line height */
         }
         .address {
-            margin: 5px 0;
-            font-family: Heavitas, sans-serif;
+            margin: 0; /* Reduced margin */
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 600px) {
+            .nav-container a {
+                font-size: 0.875rem; /* Slightly smaller text on smaller screens */
+                padding: 6px;
+            }
+            .nav-container {
+                flex-direction: column; /* Stack the links vertically */
+                align-items: center;
+            }
+            footer {
+                padding: 5px 5%; /* Further reduced padding */
+                font-size: 0.65rem; /* Further reduced font size */
+                line-height: 0.9rem; /* Further reduced line height */
+            }
         }
     </style>
 </head>
